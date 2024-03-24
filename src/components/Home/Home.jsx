@@ -1,11 +1,15 @@
 import Category from "../CategoryList/Category";
+import Featuredjobs from "../Featuredjob/Featuredjobs";
 
 
 
 const Home = () => {
     return (
         <>
-        <Category/>
+            <div className="space-y-8">
+                <Category />
+                <Featuredjobs />
+            </div>
         </>
     );
 };

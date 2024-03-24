@@ -4,11 +4,11 @@ const SIngleCategory = ({cat }) => {
     const {logo, category_name, availability} = cat;
     return (
         <>
-            <div>
+            <div className="bg-slate-100 p-5 w-64">
                 <div>
-                    <img src={logo} alt="" />
+                    <img className="w-10" src={logo} alt="" />
                 </div>
-                <h2>{category_name}</h2>
+                <h2 className="font-bold">{category_name}</h2>
                 <p>{availability}</p>
             </div>
         </>

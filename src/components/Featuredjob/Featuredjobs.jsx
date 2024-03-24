@@ -7,6 +7,8 @@ const Featuredjobs = () => {
     const description = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id, suscipit nulla consectetur officiis, ratione sunt expedita optio minus velit dolor";
     
     const [fjob, setFjob] = useState([]);
+    const [dataLength, setDataLenght ] = useState(4);
+
     useEffect(() => {
         fetch('jobs.json')
         .then(res => res.json())
@@ -18,13 +20,15 @@ const Featuredjobs = () => {
             <Heading title={'Featured Jobs'} description={description} />
             <div className="grid md:grid-cols-2 gap-5">
                 {
-                    fjob.map( job => <Featuredjob key={job.id}
+                    fjob.slice(0, dataLength).map( job => <Featuredjob key={job.id}
                     job={job}
                     ></Featuredjob>)
                 }
             </div>
-            <div className="text-center">
-                <button className="btn bg-blue-700 hover:bg-blue-600 text-white">View All Jobs </button>
+            <div className={`text-center ${dataLength === fjob.length && 'hidden'}`}>
+                <button 
+                onClick={() => setDataLenght(fjob.length)}
+                className="btn bg-blue-700 hover:bg-blue-600 text-white">View All Jobs </button>
             </div>
         </>
     );

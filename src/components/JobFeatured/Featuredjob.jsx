@@ -1,5 +1,6 @@
 import { IoLocationOutline } from "react-icons/io5";
 import { CiDollar } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 const Featuredjob = ({job}) => {
     const {id, logo, job_title, company_name,
@@ -19,7 +20,8 @@ const Featuredjob = ({job}) => {
                     <p className="flex gap-2 items-center"> <IoLocationOutline/> {location}</p>
                     <p className="flex gap-2 items-center"> <CiDollar /> {salary}</p>
                 </div>
-                <button className="btn btn-sm bg-blue-700 hover:bg-blue-600 text-white">View Details</button>
+                <Link to={`/job/${id}`} 
+                className="btn btn-sm bg-blue-700 hover:bg-blue-600 text-white">Job Details</Link>
             </div>
         </>
     );

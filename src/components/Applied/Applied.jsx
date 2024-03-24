@@ -7,6 +7,7 @@ const Applied = ({job }) => {
     const {id, logo, job_title, company_name,
         remote_or_onsite, location, 
         job_type, salary  } = job;
+
     return (
         <>
             <div className="border p-5 bg-slate-50 mb-5">

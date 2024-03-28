@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getStoredJobApplication } from "../../utils/Localstorage";
 import Applied from "../Applied/Applied";
+import { Helmet } from "react-helmet";
 
 
 const Appliedjob = () => {
@@ -41,6 +42,9 @@ const Appliedjob = () => {
 
     return (
         <>
+        <Helmet>
+            <title>Applied Job </title>
+        </Helmet>
             <div className="flex justify-between items-center mb-4">
             <h2 className="font-bold">Applied jobs: {appliedJobs.length} </h2>
             <details className="dropdown">

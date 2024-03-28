@@ -1,6 +1,7 @@
 import { IoLocationOutline } from "react-icons/io5";
 import { CiDollar } from "react-icons/ci";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Featuredjob = ({job}) => {
     const {id, logo, job_title, company_name,
